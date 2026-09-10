@@ -109,7 +109,7 @@ class KrsListScreen extends ConsumerWidget {
         title: const Text('Hapus Mata Kuliah?'),
         content: Text('Yakin ingin membatalkan pengambilan "${course.name}" (${course.sks} SKS)?'),
         actions: [
-          TextButton(
+         TextButton(
             onPressed: () => Navigator.pop(ctx),
             child: const Text('Batal'),
           ),

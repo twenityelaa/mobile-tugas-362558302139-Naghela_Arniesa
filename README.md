@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # flutter_percobaan
 
 A new Flutter project.
@@ -15,3 +16,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# mobile-tugas-362558302139-Naghela-Arniesa
+>>>>>>> e141a11e68dcc80f1dad909cf3d4c83f696cc987
