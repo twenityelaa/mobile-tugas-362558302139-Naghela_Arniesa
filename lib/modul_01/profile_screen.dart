@@ -34,6 +34,64 @@ class ProfileScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Avatar profil
+              Container(
+                width: 96,
+                height: 96,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFE0F2FE),
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: const Color(0xFF0284C7),
+                    width: 3,
+                  ),
+                ),
+                child: const Icon(
+                  Icons.school_rounded,
+                  size: 52,
+                  color: Color(0xFF0284C7),
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              // Nama mahasiswa
+              const Text(
+                'Nama Lengkap Anda', // Ganti dengan nama asli anda
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF0F172A),
+                ),
+              ),
+              const SizedBox(height: 6),
+
+              // Badge NIM
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFDBEAFE),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Text(
+                  'NIM: 3625XXXXXXX', // Ganti dengan NIM asli anda
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF1D4ED8),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+
     );
   }
 }
