@@ -128,6 +128,32 @@ class ProfileScreen extends StatelessWidget {
                   )
                 )
               )
+              const SizedBox(height: 24),
+
+              // Tombol verifikasi dengan feedback SnackBar
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed:() {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Status: Mahasiswa Aktif TRPL - Angkatan 2025'),
+                        backgroundColor: Color(0xFF0284C7),
+                        behavior: SnackBarBehavior.floating,
+                        duration: Duration(seconds: 3),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.verified_user_rounded),
+                  label: const Text('Verifikasi Status Mahasiswa'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF0284C7),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                )
+              )
             ],
           ),
         ),
