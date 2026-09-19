@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
 
               // Nama mahasiswa
               const Text(
-                'Nama Lengkap Anda', // Ganti dengan nama asli anda
+                'Nama Lengkap Mahasiswa', // Ganti dengan nama asli anda
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -87,11 +87,107 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 24),
+
+              // Kartu informasi akademik
+              Card(
+                elevation: 2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  side: BorderSide(color: Color(0xFFE2E8F0)),
+                ),
+                color: Colors.white,
+                child: const Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      _InfoRow(
+                        icon: Icons.business_rounded,
+                        label: 'Jurusan',
+                        value: 'Bisnis dan Informatika',
+                      ),
+                      Divider(height: 24, color: Color(0xFFF1F5F9)),
+                      _InfoRow(
+                        icon: Icons.code_rounded,
+                        label: 'Program Studi',
+                        value: 'Sarjana Terapan TRPL',
+                      ),
+                      Divider(height: 24, color: Color(0xFFF1F5F9)),
+                      _InfoRow(
+                        icon: Icons.location_on_rounded,
+                        label: 'Kampus',
+                        value: 'Politeknik Negeri Banyuwangi',
+                      ),
+                      Divider(height: 24, color: Color(0xFFF1F5F9)),
+                      _InfoRow(
+                        icon: Icons.calendar_today_rounded,
+                        label: 'Semester / TA',
+                        value: 'Semester 3 (2026/2027)',
+                      ),
+                    ],
+                  )
+                )
+              )
             ],
           ),
         ),
       ),
+    );
+  }
+}
 
+// Widget reusable untuk tiap baris informasi profil
+class _InfoRow extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+
+  const _InfoRow({
+    required this.icon,
+    required this.label,
+    required this.value
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: const Color(0xFFF0F9FF),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, size: 20, color: const Color(0xFF0284C7)),
+        ),
+        const SizedBox(width: 14),
+
+        // Expanded agar teks panjang otomatis wrap ke bawah dan tidak overflow
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                label,
+                style: const TextStyle(
+                  fontSize: 11,
+                  color: Color(0xFF64748B),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                value,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF0F172A),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
