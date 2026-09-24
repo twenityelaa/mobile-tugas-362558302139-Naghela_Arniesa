@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
 
               // Nama mahasiswa
               const Text(
-                'Nama Lengkap Mahasiswa', // Ganti dengan nama asli anda
+                'Naghela Arniesa Naini Wibowo', // Ganti dengan nama asli anda
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -79,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Text(
-                  'NIM: 3625XXXXXXX', // Ganti dengan NIM asli anda
+                  'NIM: 362558302139', // Ganti dengan NIM asli anda
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
@@ -124,10 +124,23 @@ class ProfileScreen extends StatelessWidget {
                         label: 'Semester / TA',
                         value: 'Semester 3 (2026/2027)',
                       ),
+                      // Tantangan 2
+                      Divider(height: 24, color: Color(0xFFF1F5F9)),
+                      _InfoRow(
+                        icon: Icons.link_rounded,
+                        label: 'Repositori GitHub',
+                        value: 'github.com/twenityelaa', 
+                      ),
+                      Divider(height: 24, color: Color(0xFFF1F5F9)),
+                      _InfoRow(
+                        icon: Icons.star_rounded,
+                        label: 'Fokus Keahlian',
+                        value: 'Mobile UI/UX & Flutter Development',
+                      ),
                     ],
                   )
                 )
-              )
+              ),
               const SizedBox(height: 24),
 
               // Tombol verifikasi dengan feedback SnackBar
