@@ -61,10 +61,10 @@ packages:
     dependency: transitive
     description:
       name: cupertino_ui
-      sha256: e9dfe7fac704028f8928cbe4028a0be5e8a709498e8daf8247de99e99a32aef3
+      sha256: c23816577a1280cff409e989541767887011f8f1d8c1863a794ed308af46f2a9
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.1.1"
   fake_async:
     dependency: transitive
     description:
@@ -125,6 +125,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "18.0.1"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      sha256: "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.6.0"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      sha256: "178d74305e7866013777bab2c3d8726205dc5a4dd935297175b19a23a2e66571"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.2"
   intl:
     dependency: transitive
     description:
@@ -201,10 +217,10 @@ packages:
     dependency: transitive
     description:
       name: material_ui
-      sha256: fbfb53cab6c4629438feeade5f3d305f72944bc9d9f25786b19106d32b80ec45
+      sha256: "134ab2f0843545c4e661e4ba2753fe1bcf0753cb690d5a9ee4870638a40411e9"
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.0"
+    version: "1.4.0"
   meta:
     dependency: transitive
     description:
@@ -322,6 +338,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "15.3.0"
+  web:
+    dependency: transitive
+    description:
+      name: web
+      sha256: "868d88a33d8a87b18ffc05f9f030ba328ffefba92d6c127917a2ba740f9cfe4a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
 sdks:
   dart: ">=3.13.1 <4.0.0"
-  flutter: ">=3.44.0"
+  flutter: ">=3.47.0"
